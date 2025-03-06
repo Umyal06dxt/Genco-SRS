@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
-import { Menu, X, BookOpen, FileText, Workflow, Layout, BarChart, Users, Home } from 'lucide-react';
+import { BarChart, BookOpen, FileText, Home, Layout, Menu, Users, Workflow, X } from 'lucide-react';
+import { useState } from 'react';
 
 // Components
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import Appendices from './sections/Appendices';
+import Dashboard from './sections/Dashboard';
+import Diagrams from './sections/Diagrams';
+import Hero from './sections/Hero';
 import Introduction from './sections/Introduction';
 import OverallDescription from './sections/OverallDescription';
 import SpecificRequirements from './sections/SpecificRequirements';
-import Appendices from './sections/Appendices';
-import Diagrams from './sections/Diagrams';
-import Workflows from './sections/Workflows';
 import Wireframes from './sections/Wireframes';
-import Dashboard from './sections/Dashboard';
+import Workflows from './sections/Workflows';
 
 function App() {
+  const [showHero, setShowHero] = useState(true);
   const [activeSection, setActiveSection] = useState('dashboard');
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
+  };
+
+  const enterDashboard = () => {
+    setShowHero(false);
   };
 
   const menuItems = [
@@ -55,6 +61,12 @@ function App() {
     }
   };
 
+  // If showing hero, render only that
+  if (showHero) {
+    return <Hero onEnterDashboard={enterDashboard} />;
+  }
+
+  // Otherwise render the full dashboard with sidebar
   return (
     <div className="flex h-screen bg-gray-900">
       {/* Mobile sidebar toggle */}

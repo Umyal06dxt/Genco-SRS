@@ -258,28 +258,38 @@ export const srsSections: SRSSection[] = [
       {
         id: "intro-purpose",
         title: "1.1 Purpose",
-        content: "This Software Requirements Specification (SRS) document provides a detailed description of the requirements for the SRS Structure application. It outlines the functional and non-functional requirements and helps the development team understand what is to be built and how it should perform."
+        content: "The purpose of this Software Requirements Specification (SRS) document is to provide a comprehensive overview of an AI-powered educational platform that enhances learning experiences through interactive, AI-driven, and community-supported tools. This document outlines the functional and non-functional requirements, system architecture, and design constraints to guide the development team"
       },
       {
         id: "intro-scope",
-        title: "1.2 Scope",
-        content: "The SRS Structure application is a web-based platform that allows users to view and navigate through a Software Requirements Specification document following IEEE standards. The system provides an interactive interface for exploring SRS content, including diagrams and figures. The application is intended for project managers, developers, stakeholders, and other individuals involved in software development projects."
+        title: "1.2 Document Conventions",
+        content: "This document follows the IEEE Std 830-1998 standard for Software Requirements Specifications. A hierarchical numbering system is used for clarity, and important terms are italicized."
       },
       {
         id: "intro-definitions",
-        title: "1.3 Definitions, Acronyms, and Abbreviations",
-        content: "• SRS: Software Requirements Specification\n• IEEE: Institute of Electrical and Electronics Engineers\n• UI: User Interface\n• UX: User Experience\n• UML: Unified Modeling Language\n• PDF: Portable Document Format\n• DOCX: Microsoft Word Document format"
-      }
-    ],
-    diagrams: [
+        title: "1.3 Intended Audience and Reading Suggestions",
+        content: "This document is intended for:\n•	Developers: To understand system design and implement features.\n•	Project Managers: To oversee development and track progress\n•	Investors: To evaluate feasibility and return on investment.\n•	Researchers: To analyze AI integration in education."
+      },
       {
-        id: "diagram-intro",
-        title: "SRS Structure Overview",
-        description: "High-level overview of the SRS document structure and organization.",
-        type: "flowchart",
-        svgContent: flowchartDiagram
-      }
-    ]
+        id: "intro-conventions",
+        title: "1.4 Project Scope",
+        content: "It integrates AI-driven insights, community engagement, and adaptive content delivery to revolutionize online learning. It offers interactive quizzes, real-time feedback, and mental health support to create a personalized and effective learning environment"
+      },
+      {
+        id: "intro-refrences",
+        title: "1.5 References",
+        content: "•	IEEE Std 830-1998 : Recommended Practice for Software Requirements Specifications\n•	TensorFlow, PyTorch, Keras Documentation\n•	MongoDB, Firebase Documentation"
+      },
+    ],
+    // diagrams: [
+    //   {
+    //     id: "diagram-intro",
+    //     title: "SRS Structure Overview",
+    //     description: "High-level overview of the SRS document structure and organization.",
+    //     type: "flowchart",
+    //     svgContent: flowchartDiagram
+    //   }
+    // ]
   },
   {
     id: "overall-desc",
@@ -290,172 +300,198 @@ export const srsSections: SRSSection[] = [
       {
         id: "desc-perspective",
         title: "2.1 Product Perspective",
-        content: "The SRS Structure application is a standalone web-based system that provides a modern interface for viewing and navigating Software Requirements Specification documents. It is designed to replace traditional static document formats with an interactive experience that enhances readability and understanding of software requirements."
+        content: "GENCO is a standalone AI-enhanced learning platform accessible via web and mobile applications. It leverages machine learning, facial expression analysis, and adaptive learning algorithms to deliver a unique educational experience tailored to individual user needs"
+      
       },
       {
         id: "desc-functions",
-        title: "2.2 Product Functions",
-        content: "• Display a landing page with information about SRS and IEEE standards\n• Provide navigation to view the detailed SRS document\n• Allow users to expand/collapse different sections of the SRS\n• Display interactive diagrams related to software requirements\n• Enable users to download the SRS document in different formats\n• Support responsive design for different device sizes"
+        title: "2.2 Product Features",
+        content: "•	Emotion-Supported AI: Analyzes facial expressions for engagement and stress levels.\n•	Dynamic Quizzes: Adaptive assessments with real-time feedback.\n•	Interactive Community: AI-moderated Q&A forums.\n•	Smart Flashcards: AI-generated study materials tailored to users.\n•	Virtual Labs: Simulated experiments for STEM education.\n•	AI Grooming Advisor: Feedback on public speaking and soft skills."
       },
       {
         id: "desc-constraints",
-        title: "2.3 Design and Implementation Constraints",
-        content: "• The application must be developed using React.js and Tailwind CSS\n• All interactive diagrams must be rendered using SVG\n• The application must conform to IEEE standards for SRS documentation\n• The system must be compatible with modern web browsers (Chrome, Firefox, Safari, Edge)\n• The application should maintain a light theme with a professional look and feel"
+        title: "2.3 User Classes and Characteristics",
+        content: "•	Students – Primary users who engage with AI-powered learning tools.\n•	Teachers – Monitor student progress and customize educational content.\n•	Administrators – Manage system infrastructure and user accounts.\n•	Developers – Expand and maintain platform capability"
       },
       {
         id: "desc-assumptions",
-        title: "2.4 Assumptions and Dependencies",
-        content: "• Users have basic knowledge of software development concepts\n• Users have internet access and a modern web browser\n• The system does not require a backend database for the initial release\n• The SRS content will be statically defined in the application"
-      }
-    ],
-    diagrams: [
+        title: "2.4 Operating Environment",
+        content: "•	Web Application – Built using React Native and Node.js.\n•	Mobile Application – Available on iOS and Android.\n•	Cloud Hosting – Deployed on AWS and Firebase"
+      },
       {
-        id: "diagram-usecase",
-        title: "Use Case Diagram",
-        description: "Main use cases for the SRS Structure application.",
-        type: "usecase",
-        svgContent: useCaseDiagram
-      }
-    ]
+        id: "desc-implementation",
+        title: "2.5 Design and Implementation Constraints",
+        content: "•	Compliance with GDPR and FERPA.\n•	Limitations of AI models and their training data.\n•	Support for multiple languages."
+      },
+      {
+        id: "desc-Documentation",
+        title: "2.6 User Documentation",
+        content: "•	User Manuals\n•	FAQs\n•	Video Tutorials"
+      },
+      {
+        id: "desc-Dependencies",
+        title: "2.7 Assumptions and Dependencies",
+        content: "•	Users will have a stable internet connection.\n•	AI models require periodic retraining.\n•	Community moderation is AI-assisted."
+      },
+
+
+    ],
+    // diagrams: [
+    //   {
+    //     id: "diagram-usecase",
+    //     title: "Use Case Diagram",
+    //     description: "Main use cases for the SRS Structure application.",
+    //     type: "usecase",
+    //     svgContent: useCaseDiagram
+    //   }
+    // ]
   },
   {
     id: "requirements",
-    title: "3. Specific Requirements",
-    description: "Detailed functional and non-functional requirements",
+    title: "3. System Features",
+    description: "Detailed features of the platform",
     icon: Layout,
     subsections: [
       {
         id: "req-functional",
-        title: "3.1 Functional Requirements",
-        content: "3.1.1 Landing Page\n• The system shall display a welcome message introducing SRS and IEEE standards\n• The system shall provide a call-to-action button to view the SRS document\n• The system shall display a professional background illustration related to software documentation\n\n3.1.2 SRS Document Page\n• The system shall display organized sections of an IEEE-compliant SRS document\n• The system shall enable users to expand and collapse different sections\n• The system shall render interactive diagrams and figures within relevant sections\n• The system shall provide navigation back to the landing page"
+        title: "3.1 Emotion-Supported AI",
+        content: "•	Real-time facial expression analysis.\n•	Engagement tracking during learning sessions."
       },
       {
         id: "req-performance",
-        title: "3.2 Performance Requirements",
-        content: "• The application shall load the landing page within 2 seconds on standard broadband connections\n• The application shall render interactive diagrams within 1 second of expanding a section\n• The application shall support at least 100 concurrent users without performance degradation\n• Page transitions shall be smooth and appear within 300ms"
+        title: "3.2 Dynamic Quizzes",
+        content: "•	AI-generated adaptive questions.\n•	Real-time feedback on user performance"
       },
       {
         id: "req-interface",
-        title: "3.3 Interface Requirements",
-        content: "3.3.1 User Interface\n• The UI shall follow a light theme with soft shades of blue, gray, and white\n• The UI shall use rounded buttons with soft shadows\n• The UI shall implement subtle animations for page transitions and interactions\n• The typography shall be modern and readable (e.g., Inter, Roboto, or Open Sans)\n\n3.3.2 Software Interfaces\n• The application shall be compatible with modern web browsers\n• The application shall use React.js for the frontend implementation\n• The application shall use Tailwind CSS for styling components"
+        title: "3.3 Interactive Community",
+        content: "•	AI-moderated discussion forums.\n•	Peer-driven Q&A system."
+      },
+      {
+        id: "req-Flashcards",
+        title: "3.4 Smart Flashcards",
+        content: "•	AI-curated study materials.\n•	Personalized learning based on syllabus."
+      },
+      {
+        id: "req-Virtual",
+        title: "3.5 Virtual Labs",
+        content: "•	Simulated experiments for hands-on STEM learning"
       },
       {
         id: "req-security",
-        title: "3.4 Security Requirements",
-        content: "• The application shall enforce content security policies to prevent XSS attacks\n• The application shall implement appropriate measures to protect against common web vulnerabilities\n• The application shall not collect or store user personal information"
+        title: "3.6 AI Grooming Advisor",
+        content: "•	Public speaking feedback.\n•	Soft skills evaluation using AI."
       }
+
     ],
-    diagrams: [
-      {
-        id: "diagram-sequence",
-        title: "Sequence Diagram",
-        description: "Interaction sequence for viewing the SRS document.",
-        type: "sequence",
-        svgContent: sequenceDiagram
-      }
-    ]
+    // diagrams: [
+    //   {
+    //     id: "diagram-sequence",
+    //     title: "Sequence Diagram",
+    //     description: "Interaction sequence for viewing the SRS document.",
+    //     type: "sequence",
+    //     svgContent: sequenceDiagram
+    //   }
+    // ]
   },
   {
     id: "other-requirements",
-    title: "4. Other Requirements",
+    title: "4. External Interface Requirements",
     description: "Additional requirements and considerations",
     icon: Code,
     subsections: [
       {
         id: "other-attributes",
-        title: "4.1 Quality Attributes",
-        content: "4.1.1 Usability\n• The system shall be intuitive enough that users can navigate the SRS without training\n• The system shall use consistent UI patterns throughout\n• The system shall provide clear visual feedback for user interactions\n\n4.1.2 Reliability\n• The system shall display appropriate error messages when errors occur\n• The system shall recover gracefully from user input errors\n\n4.1.3 Maintainability\n• The code shall be well-structured and documented\n• The system shall use component-based architecture for easy updates"
+        title: "4.1 User Interfaces",
+        content: "•	Intuitive UI for web and mobile.\n•	Dark mode and accessibility features"
       },
       {
-        id: "other-analysis",
-        title: "4.2 Analysis Models",
-        content: "The following analysis models are included to provide additional context for the requirements:\n• Use Case Diagram - showing the main use cases of the system\n• Sequence Diagram - illustrating the typical flow of operations\n• Architecture Diagram - showing the system components and their relationships"
+        id: "other-Hardware",
+        title: "4.2 Hardware Interfaces",
+        content: "•	Compatible with standard webcams for emotion tracking.\n •Supports external microphones for voice analysis"
+      },
+      {
+        id: "other-Software",
+        title: "4.3 Software Interfaces",
+        content: "•	Integrates with Firebase for authentication.\n•	Uses TensorFlow for AI-driven analysis."
+      },
+      {
+        id: "other-Communications",
+        title: "4.4 Communications Interfaces",
+        content: "•	Secure API-based communication.\n•	Email and push notifications."
       }
     ],
-    diagrams: [
-      {
-        id: "diagram-architecture",
-        title: "Architecture Diagram",
-        description: "High-level architecture of the SRS Structure application.",
-        type: "architecture",
-        svgContent: architectureDiagram
-      }
-    ]
+    // diagrams: [
+    //   {
+    //     id: "diagram-architecture",
+    //     title: "Architecture Diagram",
+    //     description: "High-level architecture of the SRS Structure application.",
+    //     type: "architecture",
+    //     svgContent: architectureDiagram
+    //   }
+    // ]
   },
   {
     id: "security",
-    title: "5. Security Considerations",
-    description: "Security aspects and protection measures",
+    title: "5. Other Nonfunctional Requirements",
+    description: "Other nonfunctional Requirements ",
     icon: Shield,
     subsections: [
       {
         id: "security-compliance",
-        title: "5.1 Compliance Requirements",
-        content: "The application shall comply with relevant web security standards, including OWASP guidelines for secure web application development. Regular security assessments shall be conducted to ensure compliance with these standards."
+        title: "5.1 Performance Requirements",
+        content: "•	API response time < 200ms.\n•	Real-time emotion recognition latency < 300ms"
       },
       {
         id: "security-data",
-        title: "5.2 Data Protection",
-        content: "Although the application does not collect personal data in the initial release, appropriate measures shall be implemented to protect any information displayed or processed by the application."
-      }
-    ]
-  },
-  {
-    id: "performance",
-    title: "6. Performance Requirements",
-    description: "Performance criteria and benchmarks",
-    icon: Zap,
-    subsections: [
-      {
-        id: "perf-response",
-        title: "6.1 Response Time",
-        content: "• The application shall load the landing page within 2 seconds on standard broadband connections\n• Navigation between pages shall complete within 1 second\n• Interactive elements shall respond to user input within 200ms"
+        title: "5.2 Safety Requirements",
+        content:" •	Daily system backups.\n•	Protection against unauthorized access."
       },
       {
-        id: "perf-capacity",
-        title: "6.2 Capacity",
-        content: "• The application shall support at least a 100KB SRS document without performance degradation\n• The application shall support at least 20 interactive diagrams within a single SRS document"
+        id: "security-Requirements",
+        title: "5.3 Security Requirements",
+        content:" •	End-to-end encryption.\n	Role-Based Access Control (RBAC)."
       },
       {
-        id: "perf-scalability",
-        title: "6.3 Scalability",
-        content: "The application architecture shall support future enhancements including handling larger SRS documents and additional interactive features without requiring major redesign."
+        id: "security-Quality ",
+        title: "5.4 Software Quality Attributes",
+        content:" •	Usability – Intuitive UI with accessibility support.\n•	Maintainability – Modular microservices architecture.\n•	Performance – AI models optimized for efficiency"
       }
     ]
   },
   {
     id: "future",
-    title: "7. Future Enhancements",
-    description: "Planned improvements and extensions",
+    title: "6. Other Requirements",
+    description: "Future requirements and considerations",
     icon: Bell,
     subsections: [
       {
         id: "future-features",
         title: "7.1 Potential Future Features",
-        content: "• User authentication and personalized SRS views\n• Collaborative editing of SRS documents\n• Integration with requirements management tools\n• Version history and comparison of SRS documents\n• Support for multiple SRS templates and standards"
+        content: "•	Multi-language support.\n•	Integration with external Learning Management Systems (LMS)."
       },
-      {
-        id: "future-tech",
-        title: "7.2 Technology Considerations",
-        content: "Future versions may incorporate additional technologies to enhance functionality:\n• Backend database for storing multiple SRS documents\n• Real-time collaboration features using WebSockets\n• Advanced rendering options for complex diagrams and models\n• Machine learning for requirements analysis and validation"
-      }
     ]
   },
   {
     id: "appendix",
-    title: "8. Appendix",
+    title: "Appendices",
     description: "Supporting information and references",
     icon: RefreshCw,
     subsections: [
       {
         id: "appendix-refs",
-        title: "8.1 References",
-        content: "• IEEE 830-1998 - IEEE Recommended Practice for Software Requirements Specifications\n• IEEE 29148-2018 - ISO/IEC/IEEE International Standard - Systems and software engineering - Life cycle processes - Requirements engineering\n• React.js Documentation - https://reactjs.org/docs\n• Tailwind CSS Documentation - https://tailwindcss.com/docs"
+        title: "Appendix A: Glossary",
+        content: "•	GoEmotions – A dataset for emotion detection.\n•	RBAC – Role-Based Access Control.\n•	LMS – Learning Management System."
       },
       {
         id: "appendix-glossary",
-        title: "8.2 Glossary",
-        content: "• Frontend: The user-facing part of an application\n• Component: A reusable piece of UI in React\n• Responsive Design: Design approach that makes web pages render well on different devices and window sizes\n• SVG: Scalable Vector Graphics, an XML-based vector image format\n• IEEE Standard: A published specification developed by the Institute of Electrical and Electronics Engineers"
+        title: "Appendix B: Analysis Models",
+        content: "•	System flow diagrams and AI model architecture"
+      },
+      {
+        id: "appendix-Issues",
+        title: "Appendix C: Issues List",
+        content: "•	Pending enhancements for AI training."
       }
     ]
   }

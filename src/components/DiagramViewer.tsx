@@ -13,12 +13,16 @@ const DiagramViewer: React.FC<DiagramViewerProps> = ({ diagram }) => {
     setIsExpanded(!isExpanded);
   };
 
+  // Check if the SVG content is a file path or inline SVG
+  const isFilePath = typeof diagram.svgContent === 'string' &&
+    !diagram.svgContent.trim().startsWith('<');
+
   return (
     <div className="mb-8 animate-fade-in">
       <div className="flex items-center justify-between mb-3">
         <h4 className="text-base font-medium text-foreground/90">{diagram.title}</h4>
         <button
-          className="p-1.5 rounded-full transition-colors bg-secondary hover:bg-secondary/70 "
+          className="p-1.5 rounded-full transition-colors bg-secondary hover:bg-secondary/70"
           onClick={toggleExpanded}
           aria-label={isExpanded ? "Minimize diagram" : "Maximize diagram"}
         >
@@ -26,16 +30,29 @@ const DiagramViewer: React.FC<DiagramViewerProps> = ({ diagram }) => {
         </button>
       </div>
 
-      <div className="text-sm  mb-4">{diagram.description}</div>
+      <div className="text-sm mb-4">{diagram.description}</div>
 
       <div
-        className={`diagram-container transition-all duration-300 ease-in-out  border-border ${isExpanded ? 'scale-100 shadow-lg' : 'scale-95 shadow-md'
+        className={`diagram-container transition-all duration-300 ease-in-out border-border ${isExpanded ? 'scale-100 shadow-lg' : 'scale-95 shadow-md'
           }`}
+        style={{ background: 'transparent' }}
       >
-        <div
-          className="diagram-content w-full h-full"
-          dangerouslySetInnerHTML={{ __html: diagram.svgContent }}
-        />
+        {isFilePath ? (
+          // If it's a file path, render as an image
+          <img
+            src={diagram.svgContent}
+            alt={diagram.title}
+            className="w-full h-full object-contain"
+            style={{ background: 'transparent' }}
+          />
+        ) : (
+          // If it's inline SVG, use dangerouslySetInnerHTML
+          <div
+            className="diagram-content w-full h-full"
+            style={{ background: 'transparent' }}
+            dangerouslySetInnerHTML={{ __html: diagram.svgContent }}
+          />
+        )}
       </div>
     </div>
   );

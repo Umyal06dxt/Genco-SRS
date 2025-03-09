@@ -1,25 +1,36 @@
-import React from 'react';
-import { FileText } from 'lucide-react';
 
-interface NavbarProps {
-  title: string;
-}
+import { FileText, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Navbar: React.FC<NavbarProps> = ({ title }) => {
+const Navbar = () => {
   return (
-    <header className="bg-gray-800 shadow-md z-10 border-b border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <FileText className="h-8 w-8 text-purple-500" />
-            <h1 className="ml-2 text-xl font-semibold text-gray-100">{title}</h1>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6">
-              <span className="text-sm text-gray-400">IEEE Std 830-1998</span>
-            </div>
-          </div>
-        </div>
+    <header className="w-full backdrop-blur-md border-b border-border sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between animate-fade-in">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-semibold text-primary hover:text-primary/80 transition-colors"
+        >
+          <FileText className="w-5 h-5" />
+          <span>SRS Structure</span>
+        </Link>
+
+        <nav className="flex gap-6">
+          <Link
+            to="/"
+            className="flex items-center gap-1.5 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+          >
+            <Home className="w-4 h-4" />
+            <span>Home</span>
+          </Link>
+
+          <Link
+            to="/srs-document"
+            className="flex items-center gap-1.5 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            <span>SRS Document</span>
+          </Link>
+        </nav>
       </div>
     </header>
   );

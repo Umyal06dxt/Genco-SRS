@@ -1,6 +1,7 @@
 
 import { FileText, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ThemeToggle } from './theme-toogle';
 
 const Navbar = () => {
   return (
@@ -15,6 +16,7 @@ const Navbar = () => {
         </Link>
 
         <nav className="flex gap-6">
+          <ThemeToggle />
           <Link
             to="/"
             className="flex items-center gap-1.5 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"

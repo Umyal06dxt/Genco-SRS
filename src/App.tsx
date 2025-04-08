@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ChatBot from "./components/Chatbot";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SRSDocument from "./pages/SRSDocument";
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <ChatBot />
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>

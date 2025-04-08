@@ -11,6 +11,7 @@ import { Laptop, Moon, Sun } from "lucide-react";
 type ThemeOption = "light" | "dark" | "system";
 
 export function ThemeToggle() {
+    // @ts-expect-error: useTheme may not have proper typings
     const { theme, setTheme } = useTheme();
 
     // Map theme options to icons and labels

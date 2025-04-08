@@ -1,4 +1,5 @@
 import Authors from '@/components/AboutUser';
+import { GradientButton } from '@/components/GradBtn';
 import Navbar from '@/components/Navbar';
 import { GridPattern } from "@/components/ui/grid-pattern";
 import { motion } from 'framer-motion';
@@ -118,35 +119,21 @@ const Index = () => {
               Leveraging AI-Driven Emotion Recognition and Adaptive Learning Pathways to Create Highly Personalized and Responsive Educational Experiences for Enhanced Student Engagement and Achievement
             </motion.p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              variants={staggerChildren}
-            >
-              <motion.div
-                variants={featureVariant}
-                whileHover="hover"
-              >
-                <Link
-                  to="/srs-document"
-                  className="btn-primary group shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all block"
-                >
-                  <span className='dark:text-black'>View SRS Document</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline-block dark:text-black text-white" />
-                </Link>
-              </motion.div>
 
-              <motion.div
-                variants={featureVariant}
-                whileHover="hover"
-              >
-                <a
-                  href="/test-cases"
-                  className="btn-secondary dark:text-white hover:bg-foreground/5 transition-all block"
-                >
-                  Test Cases
-                </a>
-              </motion.div>
-            </motion.div>
+
+            <Link to="/srs-document">
+              <GradientButton>View SRS Document</GradientButton>
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline-block dark:text-black text-white" />
+            </Link>
+
+
+            <Link to="/test-cases">
+              <GradientButton variant="variant">
+                Test Cases
+              </GradientButton>
+            </Link>
+
+
           </motion.div>
 
           {/* Hero Image */}

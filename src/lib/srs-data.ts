@@ -533,7 +533,7 @@ export const srsSections: SRSSection[] = [
     subsections: [
       {
         id: "future-features",
-        title: "7.1 Potential Future Features",
+        title: "6.1 Potential Future Features",
         content: "•	Multi-language support.\n•	Integration with external Learning Management Systems (LMS)."
       },
     ]

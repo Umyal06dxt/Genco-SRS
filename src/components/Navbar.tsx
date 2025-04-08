@@ -1,5 +1,5 @@
 
-import { FileText, Home } from 'lucide-react';
+import { FileText, Home, TestTube2Icon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from './theme-toogle';
 
@@ -31,6 +31,13 @@ const Navbar = () => {
           >
             <FileText className="w-4 h-4" />
             <span>SRS Document</span>
+          </Link>
+          <Link
+            to="/test-cases"
+            className="flex items-center gap-1.5 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+          >
+            <TestTube2Icon className="w-4 h-4" />
+            <span>Test Cases</span>
           </Link>
         </nav>
       </div>

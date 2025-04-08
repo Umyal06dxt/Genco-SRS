@@ -130,8 +130,8 @@ const Index = () => {
                   to="/srs-document"
                   className="btn-primary group shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/25 transition-all block"
                 >
-                  <span className='text-black'>View SRS Document</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline-block" />
+                  <span className='dark:text-black'>View SRS Document</span>
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline-block dark:text-black text-white" />
                 </Link>
               </motion.div>
 
@@ -140,10 +140,10 @@ const Index = () => {
                 whileHover="hover"
               >
                 <a
-                  href="#features"
-                  className="btn-secondary text-white hover:bg-foreground/5 transition-all block"
+                  href="/test-cases"
+                  className="btn-secondary dark:text-white hover:bg-foreground/5 transition-all block"
                 >
-                  Learn More
+                  Test Cases
                 </a>
               </motion.div>
             </motion.div>
@@ -388,7 +388,8 @@ const Index = () => {
 
                 {[
                   //  Todo: Make proper update logs
-                  { version: "1.1", date: "T.B.D.", changes: "Review and Changes" },
+                  { version: "1.2", date: "T.B.D.", changes: "Review and Changes" },
+                  { version: "1.1", date: "April 7, 2025", changes: "Test Cases Added" },
                   { version: "1.0", date: "March 5, 2025", changes: "Initial release of the SRS document" }
                 ].map((item, index) => (
                   <motion.div
@@ -402,7 +403,7 @@ const Index = () => {
                         scale: 1.2,
                         borderColor: "rgba(var(--primary), 0.7)"
                       }}
-                      transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                      transition={{ type: "spring", stiffness: 100, damping: 15 }}
                     >
                       <History className="w-5 h-5 text-primary" />
                     </motion.div>

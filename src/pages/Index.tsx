@@ -268,7 +268,7 @@ const Index = () => {
               >
                 <ShieldCheck className="w-5 h-5 text-rose-600 dark:text-rose-400" />
               </motion.div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Core Features</h3>
+              <h3 className="text-lg font-semibold mb-2 text-foreground">Product Features</h3>
 
               <motion.div
                 className="mt-auto flex flex-wrap gap-3"
